@@ -5,6 +5,7 @@ import { Admin, Delete, Resource } from 'admin-on-rest';
 import './App.css';
 
 import authClient from './authClient';
+import restClient from './restClient';
 import sagas from './sagas';
 import themeReducer from './themeReducer';
 import Login from './Login';
@@ -20,17 +21,9 @@ import { ProductList, ProductCreate, ProductEdit, ProductIcon } from './products
 import { CategoryList, CategoryEdit, CategoryIcon } from './categories';
 import { ReviewList, ReviewEdit, ReviewIcon } from './reviews';
 
-import restClient from './restClient';
-import fakeRestServer from './restServer';
+import { CityGateStationList, CityGateStationCreate, CityGateStationEdit } from './station'
 
 class App extends Component {
-    componentWillMount() {
-        this.restoreFetch = fakeRestServer();
-    }
-
-    componentWillUnmount() {
-        this.restoreFetch();
-    }
 
     render() {
         return (
@@ -47,6 +40,7 @@ class App extends Component {
                 menu={Menu}
                 messages={translations}
             >
+                <Resource name="citygatestations" list={CityGateStationList} create={CityGateStationCreate} edit={CityGateStationEdit} />
                 <Resource name="customers" list={VisitorList} edit={VisitorEdit} remove={VisitorDelete} icon={VisitorIcon} />
                 <Resource name="commands" list={CommandList} edit={CommandEdit} remove={Delete} icon={CommandIcon} options={{ label: 'Orders' }}/>
                 <Resource name="products" list={ProductList} create={ProductCreate} edit={ProductEdit} remove={Delete} icon={ProductIcon} />

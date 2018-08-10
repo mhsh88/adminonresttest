@@ -12,6 +12,7 @@ import { CategoryIcon } from './categories';
 import { ReviewIcon } from './reviews';
 
 const items = [
+    { name: 'citygatestations', icon: <VisitorIcon /> },
     { name: 'customers', icon: <VisitorIcon /> },
     { name: 'segments', icon: <LabelIcon /> },
     { name: 'commands', icon: <CommandIcon /> },
