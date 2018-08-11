@@ -1,8 +1,10 @@
 import React from 'react';
 import { NumberInput, Create, Edit, SimpleForm, DisabledInput, TextInput, DateInput, LongTextInput, ReferenceManyField, Datagrid, TextField, DateField, EditButton } from 'admin-on-rest';
 
+import CityGateStationTitle from './CityGateStationTitle';
+
 export const CityGateStationEdit = (props) => (
-    <Edit {...props}>
+    <Edit title={<CityGateStationTitle />} {...props} >
         <SimpleForm>
             <TextInput label="id" source="province"  options={{ fullWidth: true }} />
             <TextInput source="city" options={{ fullWidth: true }} />

@@ -3,12 +3,13 @@ import {
     ColumnActions,
     List,
     Datagrid,
-    TextField,
+    TextField, EditButton,
 } from 'admin-on-rest';
+import CityGateStationFilters from './CityGateStationFilters';
 
 export const CityGateStationList = props => (
-    <List {...props}>
-        <Datagrid >
+    <List {...props} filters={<CityGateStationFilters />} >
+        <Datagrid bodyOptions={{ stripedRows: true, showRowHover: true }} >
             <TextField source="user.id"/>
             <TextField source="province" />
             <TextField source="city" />
@@ -16,6 +17,9 @@ export const CityGateStationList = props => (
             <TextField source="region" />
             <TextField source="address" />
             <TextField source="nominalCapacity" />
+            <EditButton />
         </Datagrid>
     </List>
 );
+
+export default CityGateStationList;

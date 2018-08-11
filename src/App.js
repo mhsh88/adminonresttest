@@ -21,8 +21,7 @@ import { ProductList, ProductCreate, ProductEdit, ProductIcon } from './products
 import { CategoryList, CategoryEdit, CategoryIcon } from './categories';
 import { ReviewList, ReviewEdit, ReviewIcon } from './reviews';
 
-import { CityGateStationCreate, CityGateStationEdit } from './station';
-import { CityGateStationList } from "./station/cityGateStation/CityGateStationList";
+import { CityGateStationList, CityGateStationCreate, CityGateStationEdit,CityGateStationDetails,CityGateStationDelete,CityGateStationRetrieve, CityGateStationIcon } from './station';
 
 class App extends Component {
 
@@ -41,7 +40,7 @@ class App extends Component {
                 menu={Menu}
                 messages={translations}
             >
-                <Resource name="citygatestations" list={CityGateStationList} create={CityGateStationCreate} edit={CityGateStationEdit} />
+                <Resource name="citygatestations" list={CityGateStationList} create={CityGateStationCreate} edit={CityGateStationEdit} show={CityGateStationDetails} remove={CityGateStationDelete} retrieve={CityGateStationRetrieve} icon={CityGateStationIcon} />
                 <Resource name="customers" list={VisitorList} edit={VisitorEdit} remove={VisitorDelete} icon={VisitorIcon} />
                 <Resource name="commands" list={CommandList} edit={CommandEdit} remove={Delete} icon={CommandIcon} options={{ label: 'Orders' }}/>
                 <Resource name="products" list={ProductList} create={ProductCreate} edit={ProductEdit} remove={Delete} icon={ProductIcon} />
