@@ -26,6 +26,9 @@ export default {
         },
     },
     resources: {
+        citygatestations:{
+            name: 'City Gate Stations'
+        },
         customers: {
             name: 'Customer |||| Customers',
             fields: {

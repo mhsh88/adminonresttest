@@ -6,9 +6,9 @@ import {
     TextField,
 } from 'admin-on-rest';
 
-const CityGateStationList = props => (
-    <List {...props} >
-        <Datagrid bodyOptions={{ stripedRows: true, showRowHover: true }}>
+export const CityGateStationList = props => (
+    <List {...props}>
+        <Datagrid >
             <TextField source="user.id"/>
             <TextField source="province" />
             <TextField source="city" />
@@ -16,10 +16,6 @@ const CityGateStationList = props => (
             <TextField source="region" />
             <TextField source="address" />
             <TextField source="nominalCapacity" />
-
-            <ColumnActions smallScreen />
         </Datagrid>
     </List>
 );
-
-export default CityGateStationList;

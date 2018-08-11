@@ -21,14 +21,15 @@ import { ProductList, ProductCreate, ProductEdit, ProductIcon } from './products
 import { CategoryList, CategoryEdit, CategoryIcon } from './categories';
 import { ReviewList, ReviewEdit, ReviewIcon } from './reviews';
 
-import { CityGateStationList, CityGateStationCreate, CityGateStationEdit } from './station'
+import { CityGateStationCreate, CityGateStationEdit } from './station';
+import { CityGateStationList } from "./station/cityGateStation/CityGateStationList";
 
 class App extends Component {
 
     render() {
         return (
             <Admin
-                title="Posters Galore Admin"
+                title="CGS Admin"
                 restClient={restClient}
                 customReducers={{ theme: themeReducer }}
                 customSagas={sagas}
