@@ -33617,7 +33617,7 @@ data = {
       "product_id": 37,
       "customer_id": 378,
       "rating": 5,
-      "comment": "Amudagum si piojoeca ugukucel ebu puropo witini ve lirobsas biac otafoj halgetuzo waj holza givifa. Ucsa zap relnadco pursef pazcauf kaknisfi olanoh jot ac noc nilir raek kugo lom olvug. Gas tif vocwemib ertewcut ajsej nal muh po fetzep gugipe veztosu elo berco fu hathe nir. Retwe rifevu pa tukgeeja ronap womfup refsam imimuve sabno izmo numum fezek div uzcu ku jek kiga un."
+      "comment": "Amudagum si piojoeca ugukucel ebu puropo witini ve lirobsas biac otafoj halgetuzo waj holza givifa. Ucsa zap relnadco pursef pazcauf kaknisfi olanoh jot ac noc nilir raek kugo lom olvug. GasList tif vocwemib ertewcut ajsej nal muh po fetzep gugipe veztosu elo berco fu hathe nir. Retwe rifevu pa tukgeeja ronap womfup refsam imimuve sabno izmo numum fezek div uzcu ku jek kiga un."
     },
     {
       "id": 11,

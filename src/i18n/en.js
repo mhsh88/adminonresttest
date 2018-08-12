@@ -29,6 +29,13 @@ export default {
         citygatestations:{
             name: 'City Gate Stations'
         },
+        gass:{
+            name: 'Gas Properties'
+
+        },
+        calculations:{
+            name: 'Calculations'
+        },
         customers: {
             name: 'Customer |||| Customers',
             fields: {

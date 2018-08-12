@@ -21,7 +21,19 @@ import { ProductList, ProductCreate, ProductEdit, ProductIcon } from './products
 import { CategoryList, CategoryEdit, CategoryIcon } from './categories';
 import { ReviewList, ReviewEdit, ReviewIcon } from './reviews';
 
-import { CityGateStationList, CityGateStationCreate, CityGateStationEdit,CityGateStationDetails,CityGateStationDelete,CityGateStationRetrieve, CityGateStationIcon } from './station';
+import {
+    CityGateStationList,
+    CityGateStationCreate,
+    CityGateStationEdit,
+    CityGateStationDetails,
+    CityGateStationDelete,
+    CityGateStationRetrieve,
+    CityGateStationIcon,
+    GasList,
+    GasCreate,
+    GasEdit,
+    CalculationList, CalculationCreate, CalculationEdit
+} from './station';
 
 class App extends Component {
 
@@ -41,12 +53,17 @@ class App extends Component {
                 messages={translations}
             >
                 <Resource name="citygatestations" list={CityGateStationList} create={CityGateStationCreate} edit={CityGateStationEdit} show={CityGateStationDetails} remove={CityGateStationDelete} retrieve={CityGateStationRetrieve} icon={CityGateStationIcon} />
+                <Resource name="calculations" list={CalculationList} create={CalculationCreate} edit={CalculationEdit}/>
+                <Resource name="gass" list={GasList} create={GasCreate} edit={GasEdit}/>
                 <Resource name="customers" list={VisitorList} edit={VisitorEdit} remove={VisitorDelete} icon={VisitorIcon} />
                 <Resource name="commands" list={CommandList} edit={CommandEdit} remove={Delete} icon={CommandIcon} options={{ label: 'Orders' }}/>
                 <Resource name="products" list={ProductList} create={ProductCreate} edit={ProductEdit} remove={Delete} icon={ProductIcon} />
                 <Resource name="categories" list={CategoryList} edit={CategoryEdit} remove={Delete} icon={CategoryIcon} />
                 <Resource name="reviews" list={ReviewList} edit={ReviewEdit} icon={ReviewIcon} />
                 <Resource name="users" />
+                <Resource name="states" />
+
+
             </Admin>
         );
     }
