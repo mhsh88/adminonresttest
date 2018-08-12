@@ -46,6 +46,7 @@ class App extends Component {
                 <Resource name="products" list={ProductList} create={ProductCreate} edit={ProductEdit} remove={Delete} icon={ProductIcon} />
                 <Resource name="categories" list={CategoryList} edit={CategoryEdit} remove={Delete} icon={CategoryIcon} />
                 <Resource name="reviews" list={ReviewList} edit={ReviewEdit} icon={ReviewIcon} />
+                <Resource name="users" />
             </Admin>
         );
     }
