@@ -24,7 +24,7 @@ export const CalculationEdit = (props) => (
             <ReferenceInput label="Station" source="cityGateStation.id" reference="citygatestations" allowEmpty >
                 <SelectInput optionText="city" validate={required}/>
             </ReferenceInput>
-            <ReferenceInput label="Condition" source="state.id" reference="states" allowEmpty >
+            <ReferenceInput label="Condition" source="condition.id" reference="conditions" allowEmpty >
                 <SelectInput optionText="id" validate={required}/>
             </ReferenceInput>
             <ReferenceInput label="Natural Gas" source="gas.id" reference="gass" allowEmpty>

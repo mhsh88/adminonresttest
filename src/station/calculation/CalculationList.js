@@ -6,8 +6,6 @@ import {
     TextField, EditButton, ReferenceField,
 } from 'admin-on-rest';
 
-import CalculationFilter from './CalculationFilter';
-
 export const CalculationList = props => (
     <List {...props}>
         <Datagrid bodyOptions={{ stripedRows: true, showRowHover: true }} >
@@ -16,7 +14,7 @@ export const CalculationList = props => (
             <ReferenceField label="Station" source="cityGateStation.id" reference="citygatestations">
                 <TextField source="city" />
             </ReferenceField>
-            <ReferenceField label="Condition" source="state.id" reference="states">
+            <ReferenceField label="Condition" source="condition.id" reference="conditions">
                 <TextField source="id" />
             </ReferenceField>
             <ReferenceField label="Natural Gas" source="gas.id" reference="gass">

@@ -39,6 +39,12 @@ export default {
         conditions:{
           name: 'Conditions'
         },
+        heaters:{
+          name: "Heaters"
+        },
+        burners:{
+            name:"Burners"
+        },
         customers: {
             name: 'Customer |||| Customers',
             fields: {

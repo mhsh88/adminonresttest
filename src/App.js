@@ -33,7 +33,9 @@ import {
     GasCreate,
     GasEdit,
     CalculationList, CalculationCreate, CalculationEdit,
-    ConditionList, ConditionCreate
+    ConditionList, ConditionCreate,
+    HeaterList, HeaterCreate,
+    BurnerList, BurnerCreate
 } from './station';
 
 class App extends Component {
@@ -57,6 +59,9 @@ class App extends Component {
                 <Resource name="calculations" list={CalculationList} create={CalculationCreate} edit={CalculationEdit}/>
                 <Resource name="gass" list={GasList} create={GasCreate} edit={GasEdit}/>
                 <Resource name="conditions" list={ConditionList} create={ConditionCreate}/>
+                <Resource name="heaters" list={HeaterList} create={HeaterCreate}/>
+                <Resource name="burners" list={BurnerList}  create={BurnerCreate}/>
+
                 <Resource name="customers" list={VisitorList} edit={VisitorEdit} remove={VisitorDelete} icon={VisitorIcon} />
                 <Resource name="commands" list={CommandList} edit={CommandEdit} remove={Delete} icon={CommandIcon} options={{ label: 'Orders' }}/>
                 <Resource name="products" list={ProductList} create={ProductCreate} edit={ProductEdit} remove={Delete} icon={ProductIcon} />
