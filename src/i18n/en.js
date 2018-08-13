@@ -36,6 +36,9 @@ export default {
         calculations:{
             name: 'Calculations'
         },
+        conditions:{
+          name: 'Conditions'
+        },
         customers: {
             name: 'Customer |||| Customers',
             fields: {

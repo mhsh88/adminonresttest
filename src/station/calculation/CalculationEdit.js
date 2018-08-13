@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     NumberInput,
+    required,
     Create,
     Edit,
     SimpleForm,
@@ -21,13 +22,13 @@ export const CalculationEdit = (props) => (
         <SimpleForm>
             <DisabledInput source="id"/>
             <ReferenceInput label="Station" source="cityGateStation.id" reference="citygatestations" allowEmpty >
-                <SelectInput optionText="city" />
+                <SelectInput optionText="city" validate={required}/>
             </ReferenceInput>
             <ReferenceInput label="Condition" source="state.id" reference="states" allowEmpty >
-                <SelectInput optionText="id" />
+                <SelectInput optionText="id" validate={required}/>
             </ReferenceInput>
-            <ReferenceInput label="Natural Gas" source="gas.id" reference="gass">
-                <SelectInput source="name" />
+            <ReferenceInput label="Natural Gas" source="gas.id" reference="gass" allowEmpty>
+                <SelectInput optionText="name" validate={required}/>
             </ReferenceInput>
 
         </SimpleForm>

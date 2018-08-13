@@ -32,7 +32,8 @@ import {
     GasList,
     GasCreate,
     GasEdit,
-    CalculationList, CalculationCreate, CalculationEdit
+    CalculationList, CalculationCreate, CalculationEdit,
+    ConditionList, ConditionCreate
 } from './station';
 
 class App extends Component {
@@ -55,13 +56,14 @@ class App extends Component {
                 <Resource name="citygatestations" list={CityGateStationList} create={CityGateStationCreate} edit={CityGateStationEdit} show={CityGateStationDetails} remove={CityGateStationDelete} retrieve={CityGateStationRetrieve} icon={CityGateStationIcon} />
                 <Resource name="calculations" list={CalculationList} create={CalculationCreate} edit={CalculationEdit}/>
                 <Resource name="gass" list={GasList} create={GasCreate} edit={GasEdit}/>
+                <Resource name="conditions" list={ConditionList} create={ConditionCreate}/>
                 <Resource name="customers" list={VisitorList} edit={VisitorEdit} remove={VisitorDelete} icon={VisitorIcon} />
                 <Resource name="commands" list={CommandList} edit={CommandEdit} remove={Delete} icon={CommandIcon} options={{ label: 'Orders' }}/>
                 <Resource name="products" list={ProductList} create={ProductCreate} edit={ProductEdit} remove={Delete} icon={ProductIcon} />
                 <Resource name="categories" list={CategoryList} edit={CategoryEdit} remove={Delete} icon={CategoryIcon} />
                 <Resource name="reviews" list={ReviewList} edit={ReviewEdit} icon={ReviewIcon} />
                 <Resource name="users" />
-                <Resource name="states" />
+
 
 
             </Admin>
