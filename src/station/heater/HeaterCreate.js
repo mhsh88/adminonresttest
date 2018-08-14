@@ -30,9 +30,12 @@ export const HeaterCreate = (props) => (
         <SimpleForm>
             <DisabledInput source="id"/>
             <NumberInput source="efficiency" validate={[required, maxValue(100),minValue(0)]} />
-            <ReferenceArrayInput source="burners" reference="burners" allowEmpty validate={required}>
+            <ReferenceArrayInput  reference="burners" validate={required} allowEmpty>
                 <SelectArrayInput optionText="oxygenPercent" />
             </ReferenceArrayInput>
+            <ReferenceInput reference="burners" validate={required} allowEmpty >
+                <SelectInput optionText="oxygenPercent"  />
+            </ReferenceInput>
         </SimpleForm>
     </Create>
 );
