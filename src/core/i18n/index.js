@@ -1,5 +1,6 @@
 export const DEFAULT_LANGUAGE = 'fa';
 export const INITIAL_LANGUAGE = 'initial';
+export const DEFAULT_LOCALE = 'en';
 export * from './TranslationUtils';
 
 export { default as englishMessages } from './englishMessages';

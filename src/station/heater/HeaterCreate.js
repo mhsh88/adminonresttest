@@ -21,22 +21,32 @@ import {
     BooleanInput,
     TextField,
     ReferenceArrayInput,
-    SelectArrayInput
+    SelectArrayInput,
+    TabbedForm,
+    FormTab
 } from 'admin-on-rest';
+
 
 
 export const HeaterCreate = (props) => (
     <Create {...props}>
-        <SimpleForm>
-            <DisabledInput source="id"/>
-            <NumberInput source="efficiency" validate={[required, maxValue(100),minValue(0)]} />
-            <ReferenceArrayInput  reference="burners" validate={required} allowEmpty>
-                <SelectArrayInput optionText="oxygenPercent" />
-            </ReferenceArrayInput>
-            <ReferenceInput reference="burners" validate={required} allowEmpty >
-                <SelectInput optionText="oxygenPercent"  />
-            </ReferenceInput>
-        </SimpleForm>
+        <TabbedForm>
+            <FormTab label="resources.organizationassessments.tabs.step1">
+                <DisabledInput source="id"/>
+                <NumberInput source="efficiency" validate={[required, maxValue(100),minValue(0)]} />
+                <ReferenceArrayInput source="id" reference="burners"
+                                     filterToQuery={searchText => ({ oxygenPercent: searchText })}
+                                     validate={required} allowEmpty>
+                    <SelectArrayInput optionText="oxygenPercent" />
+                </ReferenceArrayInput>
+                <ReferenceInput source="id" reference="burners" validate={required} allowEmpty >
+                    <SelectInput optionText="oxygenPercent"  />
+                </ReferenceInput>
+            </FormTab>
+            <FormTab label="resources.organizationassessments.tabs.step1"/>
+        </TabbedForm>
+
+
     </Create>
 );
 
